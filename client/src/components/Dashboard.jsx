@@ -4,7 +4,7 @@ import StocksList from "./StocksList.jsx";
 import StocksManagement from "./StocksManagement.jsx";
 import StocksLoaderStatus from "./StocksLoaderStatus.jsx";
 
-const stocksUrl = 'ws://stocks.mnet.website/';
+const stocksUrl = 'wss://stocks.mnet.website/';
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -36,7 +36,7 @@ class Dashboard extends React.Component {
   handleEnter(event) {
     // alert('Отправленное имя: ' + this.state.value);
 
-    fetch('http://localhost:8000/api/users?email=' + this.state.email)
+    fetch('https://' + window.location.hostname + '/api/users?email=' + this.state.email)
     .then(response => response.json())
     .then(user => {
         if (user[0]) {

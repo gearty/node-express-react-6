@@ -8,7 +8,7 @@ class ManagementRow extends React.Component {
       let user = this.props.user;
       user.money = parseFloat(user.money) + parseFloat(this.props.stocks[this.props.selectedStockName].current_value);
 
-      fetch('http://localhost:8000/api/users/' + this.props.user.id, {
+      fetch('https://' + window.location.hostname + '/api/users/' + this.props.user.id, {
         method: 'PUT',
         body: JSON.stringify(user),
         headers: {
@@ -20,7 +20,7 @@ class ManagementRow extends React.Component {
         console.log(data)
       });
 
-      fetch('http://localhost:8000/api/stocks/' + stock.id, {
+      fetch('https://' + window.location.hostname + '/api/stocks/' + stock.id, {
         method: 'DELETE',
       }).then(function(response) {
         return response.json();
