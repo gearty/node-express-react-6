@@ -70,7 +70,7 @@ class StocksManagement extends React.Component {
   };
 
   fetchOwnedStock = (name) => {
-    fetch('https://' + window.location.hostname + '/api/stocks?name=' + name + '&user=' + this.state.user.id)
+    fetch('http://localhost:8000/api/stocks?name=' + name + '&user=' + this.state.user.id)
     .then(response => response.json())
     .then(stocks => {
         if (stocks) {
@@ -83,7 +83,7 @@ class StocksManagement extends React.Component {
   };
 
   fetchUser = () => {
-    fetch('https://' + window.location.hostname + '/api/users/' + this.state.user.id)
+    fetch('http://localhost:8000/api/users/' + this.state.user.id)
     .then(response => response.json())
     .then(user => {
         if (user[0]) {
@@ -100,7 +100,7 @@ class StocksManagement extends React.Component {
 
     if (parseFloat(user.money) > parseFloat(this.state.stocks[this.state.selectedStockName].current_value)){
       user.money = parseFloat(user.money) - parseFloat(this.state.stocks[this.state.selectedStockName].current_value);
-      fetch('https://' + window.location.hostname + '/api/users/' + user.id, {
+      fetch('http://localhost:8000/api/users/' + user.id, {
         method: 'PUT',
         body: JSON.stringify(user),
         headers: {
@@ -118,7 +118,7 @@ class StocksManagement extends React.Component {
         user: user.id,
         bought_at: new Date().toLocaleString()
       };
-      fetch( 'https://' + window.location.hostname + '/api/stocks', {
+      fetch('http://localhost:8000/api/stocks', {
         method: 'POST',
         body: JSON.stringify(body),
         headers: {

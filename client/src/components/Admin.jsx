@@ -10,7 +10,7 @@ class Admin extends React.Component  {
     }
 
   fetchUsers = () => {
-    fetch('https://' + window.location.hostname + '/api/users')
+    fetch('http://localhost:8000/api/users')
     .then(response => response.json())
     .then(users => this.setState({users: users}));
   };

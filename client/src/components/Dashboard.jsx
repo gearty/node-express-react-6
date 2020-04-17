@@ -36,7 +36,7 @@ class Dashboard extends React.Component {
   handleEnter(event) {
     // alert('Отправленное имя: ' + this.state.value);
 
-    fetch('https://' + window.location.hostname + '/api/users?email=' + this.state.email)
+    fetch('http://localhost:8000/api/users?email=' + this.state.email)
     .then(response => response.json())
     .then(user => {
         if (user[0]) {
