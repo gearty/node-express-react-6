@@ -4,7 +4,7 @@ import StocksList from "./StocksList.jsx";
 import StocksManagement from "./StocksManagement.jsx";
 import StocksLoaderStatus from "./StocksLoaderStatus.jsx";
 
-const stocksUrl = 'wss://stocks.mnet.website/';
+const stocksUrl = 'ws://stocks.mnet.website/';
 
 class Dashboard extends React.Component {
     constructor(props) {
