@@ -1,0 +1,135 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vladislav",
+      "surname": "Petrenko",
+      "email": "vladislav.petrenko@email.com",
+      "money": "10000"
+    },
+    {
+      "id": 2,
+      "name": "Petro",
+      "surname": "Sirenko",
+      "email": "petro.sirenko@email.com",
+      "money": 1851.1507357884118
+    },
+    {
+      "id": 3,
+      "name": "Heorhii",
+      "surname": "Tulchiy",
+      "email": "heorhii.tulchiy@email.com",
+      "money": 999999277.3744309
+    }
+  ],
+  "stocks": [
+    {
+      "id": 1,
+      "name": "ASAD",
+      "price": "19.0609",
+      "user": 1
+    },
+    {
+      "id": 2,
+      "name": "APPLE",
+      "price": "4.4517",
+      "user": 2
+    },
+    {
+      "name": "aapl",
+      "price": 84.91108049971776,
+      "user": 3,
+      "id": 3
+    },
+    {
+      "name": "aapl",
+      "price": 84.91108049971776,
+      "user": 3,
+      "id": 4
+    },
+    {
+      "name": "goog",
+      "price": 44.287532360077584,
+      "user": 3,
+      "bought_at": "17.04.2020",
+      "id": 5
+    },
+    {
+      "name": "evi",
+      "price": 13.12673165038416,
+      "user": 3,
+      "bought_at": "17.04.2020, 21:40:09",
+      "id": 6
+    },
+    {
+      "name": "lnkd",
+      "price": 77.21503079959484,
+      "user": 2,
+      "bought_at": "17.04.2020, 21:42:21",
+      "id": 10
+    },
+    {
+      "name": "ebr",
+      "price": 48.41746116381624,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:09",
+      "id": 11
+    },
+    {
+      "name": "lnkd",
+      "price": 123.45043893166135,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:14",
+      "id": 12
+    },
+    {
+      "name": "aks",
+      "price": 145.75604360852216,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:16",
+      "id": 13
+    },
+    {
+      "name": "mu",
+      "price": 22.477901907219678,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:19",
+      "id": 14
+    },
+    {
+      "name": "shld",
+      "price": 11.650565880063773,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:21",
+      "id": 15
+    },
+    {
+      "name": "eva",
+      "price": 196.75520285706529,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:23",
+      "id": 16
+    },
+    {
+      "name": "yhoo",
+      "price": 69.2407174576351,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:26",
+      "id": 17
+    },
+    {
+      "name": "intc",
+      "price": 18.015716941163966,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:28",
+      "id": 18
+    },
+    {
+      "name": "tck",
+      "price": 195.90694891446276,
+      "user": 3,
+      "bought_at": "17.04.2020, 22:11:30",
+      "id": 19
+    }
+  ]
+}
