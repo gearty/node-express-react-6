@@ -13,6 +13,7 @@ class StocksManagement extends React.Component {
         ownedStocks: [],
         user: props.user,
         selectedStockName: props.selectedStockName,
+        selectedStockValue: 0,
         stocks: props.stocks
       };
     }
@@ -21,22 +22,22 @@ class StocksManagement extends React.Component {
   updateChart = () => {
     let chart = this.refs.chart.chartInstance;
 
-    if(Object.keys(this.props.stocks).length === 0)
+    if(Object.keys(this.state.stocks).length === 0)
     {
       chart.data.datasets = [];
       return chart.update();
     }
 
-    Object.keys(this.props.stocks).map((stock_name, index) =>
+    Object.keys(this.state.stocks).map((stock_name, index) =>
     {
-      let current_stock = this.props.stocks[stock_name];
+      let current_stock = this.state.stocks[stock_name];
       let chart_dataset = chart.data.datasets.find((dataset) => {
         return dataset.label === stock_name.toUpperCase()
       });
 
       if(current_stock.is_selected)
       {
-        let current_stock = this.props.stocks[stock_name];
+        let current_stock = this.state.stocks[stock_name];
         this.fetchOwnedStock(stock_name);
 
         if(chart_dataset)
@@ -114,7 +115,7 @@ class StocksManagement extends React.Component {
 
       let body = {
         name: this.state.selectedStockName,
-        price: this.state.stocks[this.state.selectedStockName].current_value,
+        price: this.state.selectedStockValue,
         user: user.id,
         bought_at: new Date().toLocaleString()
       };
@@ -135,8 +136,16 @@ class StocksManagement extends React.Component {
   };
 
   componentWillReceiveProps(nextProps) {
-  if (nextProps.selectedStockName !== this.state.selectedStockName) {
-    this.setState({ selectedStockName: nextProps.selectedStockName });
+  if (nextProps.selectedStockName !== this.state.selectedStockName){
+    this.setState({
+      selectedStockName: nextProps.selectedStockName,
+      selectedStockValue: nextProps.stocks[nextProps.selectedStockName].current_value
+    });
+    this.updateChart()
+  }
+  else if (this.state.selectedStockName &&
+      nextProps.stocks[this.state.selectedStockName].current_value !== this.state.selectedStockValue) {
+    this.setState({ selectedStockValue: nextProps.stocks[this.state.selectedStockName].current_value });
     this.updateChart()
   }
 }

@@ -19,7 +19,7 @@
       "name": "Heorhii",
       "surname": "Tulchiy",
       "email": "heorhii.tulchiy@email.com",
-      "money": 999999277.3744309
+      "money": 999999339.9934543
     }
   ],
   "stocks": [
@@ -34,25 +34,6 @@
       "name": "APPLE",
       "price": "4.4517",
       "user": 2
-    },
-    {
-      "name": "aapl",
-      "price": 84.91108049971776,
-      "user": 3,
-      "id": 3
-    },
-    {
-      "name": "aapl",
-      "price": 84.91108049971776,
-      "user": 3,
-      "id": 4
-    },
-    {
-      "name": "goog",
-      "price": 44.287532360077584,
-      "user": 3,
-      "bought_at": "17.04.2020",
-      "id": 5
     },
     {
       "name": "evi",
@@ -130,6 +111,27 @@
       "user": 3,
       "bought_at": "17.04.2020, 22:11:30",
       "id": 19
+    },
+    {
+      "name": "msft",
+      "price": 112.71419617311999,
+      "user": 3,
+      "bought_at": "17.04.2020, 23:50:25",
+      "id": 20
+    },
+    {
+      "name": "goog",
+      "price": 41.86904986135753,
+      "user": 3,
+      "bought_at": "18.04.2020, 11:45:56",
+      "id": 21
+    },
+    {
+      "name": "aapl",
+      "price": 35.66764038596584,
+      "user": 3,
+      "bought_at": "18.04.2020, 12:32:23",
+      "id": 22
     }
   ]
 }
